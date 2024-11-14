@@ -1,14 +1,6 @@
 // @refresh reload
-import { createHandler, StartServer } from '@solidjs/start/server';
-import { Spotter } from '@spotter.dev/solidstart';
+import { createHandler, StartServer } from "@solidjs/start/server";
 
-Spotter.init({
-  apikey: 'api_key',
-  projectId: 'project_id',
-  environment: 'debug',
-  debugUrl: 'https://webhook.site/20a13784-475d-4070-9570-82f99c239786',
-  logLevel: 'verbose',
-});
 
 export default createHandler(() => (
   <StartServer
