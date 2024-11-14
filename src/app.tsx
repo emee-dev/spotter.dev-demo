@@ -8,8 +8,8 @@ import "./app.css";
 Spotter.init({
   apikey: process.env.SPOTTER_API_KEY!,
   projectId: process.env.SPOTTER_PROJECT_ID!,
-  environment: "debug",
-  debugUrl: "https://webhook.site/20a13784-475d-4070-9570-82f99c239786",
+  // environment: "debug",
+  // debugUrl: "https://webhook.site/20a13784-475d-4070-9570-82f99c239786",
   logLevel: "verbose",
 });
 
