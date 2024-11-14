@@ -1,6 +1,6 @@
-import { createSignal, createResource, Suspense } from 'solid-js';
-import { Button } from '~/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
+import { createSignal, createResource, Suspense } from "solid-js";
+import { Button } from "~/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 
 const wait = async () => {
   return new Promise((resolve) => {
@@ -14,7 +14,7 @@ const fetcher = async (args: Payload) => {
   const res = await fetch(args.path, {
     method: args.method,
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: args.body ? JSON.stringify(args.body) : undefined,
   });
@@ -33,30 +33,6 @@ export default function Component() {
   const [makeRequest, setMakeRequest] = createSignal<Payload | null>(null);
   const [postAuth, _] = createResource(makeRequest, fetcher);
 
-  // const makeRequest = async ({
-  //   path,
-  //   method,
-  //   body,
-  // }: {
-  //   path: string;
-  //   method: string;
-  //   body?: object;
-  // }) => {
-  //   try {
-  //     const res = await fetch(path, {
-  //       method,
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: body ? JSON.stringify(body) : undefined,
-  //     });
-  //     const data = await res.json();
-  //     setResponse(JSON.stringify(data, null, 2));
-  //   } catch (error) {
-  //     setResponse(`Error: ${error.message}`);
-  //   }
-  // };
-
   return (
     <div class="container mx-auto p-4 space-y-6">
       <h1 class="text-2xl font-bold mb-4">API Observability Demo</h1>
@@ -69,11 +45,11 @@ export default function Component() {
           <Button
             onClick={() =>
               setMakeRequest({
-                path: '/api/auth',
-                method: 'POST',
+                path: "/api/auth",
+                method: "POST",
                 body: {
-                  username: 'user',
-                  password: 'pass',
+                  username: "user",
+                  password: "pass",
                 },
               })
             }
@@ -83,9 +59,9 @@ export default function Component() {
           <Button
             onClick={() =>
               setMakeRequest({
-                path: '/api/auth',
-                method: 'POST',
-                body: { username: 'user' },
+                path: "/api/auth",
+                method: "POST",
+                body: { username: "user" },
               })
             }
           >
@@ -102,8 +78,8 @@ export default function Component() {
           <Button
             onClick={() =>
               setMakeRequest({
-                path: '/api/users',
-                method: 'GET',
+                path: "/api/users",
+                method: "GET",
               })
             }
           >
@@ -112,8 +88,8 @@ export default function Component() {
           <Button
             onClick={() =>
               setMakeRequest({
-                path: '/api/users?error=true',
-                method: 'GET',
+                path: "/api/users?error=true",
+                method: "GET",
               })
             }
           >
@@ -130,9 +106,9 @@ export default function Component() {
           <Button
             onClick={() =>
               setMakeRequest({
-                path: '/api/users',
-                method: 'POST',
-                body: { name: 'New User' },
+                path: "/api/users",
+                method: "POST",
+                body: { name: "New User" },
               })
             }
           >
@@ -141,8 +117,8 @@ export default function Component() {
           <Button
             onClick={() =>
               setMakeRequest({
-                path: '/api/users',
-                method: 'POST',
+                path: "/api/users",
+                method: "POST",
                 body: {},
               })
             }
@@ -160,7 +136,7 @@ export default function Component() {
           <Suspense
             fallback={
               <pre class="bg-gray-100 p-4 rounded-md overflow-auto max-h-60">
-                {'No response yet'}
+                {"No response yet"}
               </pre>
             }
           >
