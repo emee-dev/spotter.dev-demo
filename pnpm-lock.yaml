@@ -18,8 +18,8 @@ importers:
         specifier: ^1.0.10
         version: 1.0.10(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.9.0)(ioredis@5.4.1)(terser@5.36.0)(typescript@5.6.3))(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))
       '@spotter.dev/solidstart':
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.6
+        version: 0.0.6
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.15)
@@ -1008,8 +1008,8 @@ packages:
   '@solidjs/start@1.0.10':
     resolution: {integrity: sha512-3yg4KraSxc4rXs9dy/3kkqjDhU0JCPsZFLmDl5n6hHRPwtLLac6WUhs2k5VxGzitHaaJM/ZQCfT7i544Mf+4tw==}
 
-  '@spotter.dev/solidstart@0.0.5':
-    resolution: {integrity: sha512-BL7Z5N9s3UAulqWexHWswO+0Gf6MwD5BejnZJQQ2qGwDhNZVIKot19pCHpS22avN/yn836Ha8z+NJay6OGdHiA==}
+  '@spotter.dev/solidstart@0.0.6':
+    resolution: {integrity: sha512-Kd7+wjUvkCv9KeS3yIpqIvkex8Q3BbJ12sq4TSq7mEw2LDWSCHvLy9gHKZWAuuHhNzIuzIo7rW0dVL8yrB8qXw==}
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
@@ -3765,7 +3765,7 @@ snapshots:
       - vinxi
       - vite
 
-  '@spotter.dev/solidstart@0.0.5':
+  '@spotter.dev/solidstart@0.0.6':
     dependencies:
       axios: 1.7.7
       dotenv: 16.4.5
