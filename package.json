@@ -5,13 +5,13 @@
     "dev": "dotenv -e ./.env -- vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
-    "update:": "update @spotter.dev/solidstart@latest"
+    "update:": "pnpm update @spotter.dev/solidstart@latest"
   },
   "dependencies": {
     "@kobalte/core": "^0.13.7",
     "@solidjs/router": "^0.15.1",
     "@solidjs/start": "^1.0.10",
-    "@spotter.dev/solidstart": "^0.0.4",
+    "@spotter.dev/solidstart": "^0.0.5",
     "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.0",
